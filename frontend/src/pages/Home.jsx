@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
-import CategorySection from "../components/CategorySection";
+
 import FeaturedJobs from "../components/FeaturedJobs";
 import LatestJobs from "../components/LatestJobs";
 import { getJobs } from "../services/jobService";
@@ -20,10 +20,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-  
-      <Marque/>
-      <ExploreByCategory/>
-      <StartPosting/>
+      <Marque />
+      <ExploreByCategory />
+      <StartPosting />
       <FeaturedJobs jobs={jobs} />
       <LatestJobs jobs={jobs} />
     </>
