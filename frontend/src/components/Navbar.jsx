@@ -1,6 +1,7 @@
 import { MdWork } from "react-icons/md";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Navbar() {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
               <MdWork />
             </div>
-            <h1 className="font-extrabold text-xl">QuickHire</h1>
+            <Link to="/" className="font-extrabold text-xl">QuickHire</Link>
           </div>
 
    

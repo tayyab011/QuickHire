@@ -1,16 +1,188 @@
-# React + Vite
+#  QuickHire – Job Portal (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuickHire is a modern full-stack Job Portal web application where companies or HR managers can post jobs and candidates can explore available opportunities.
 
-Currently, two official plugins are available:
+This project was built using the **MERN Stack (MongoDB, Express.js, React, Node.js)** with a pixel-perfect frontend UI created from Figma design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+##  Project Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+###  Job Seeker
 
-## Expanding the ESLint configuration
+* View featured jobs
+* Browse latest job listings
+* View job details
+* Explore jobs by category
+* Responsive modern UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###  Admin / HR Panel
+
+* Create new job postings
+* Delete jobs
+* Manage available job listings
+
+---
+
+##  Tech Stack
+
+### Frontend
+
+* React (Vite)
+* Tailwind CSS
+* DaisyUI
+* Axios
+* React Router
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB Atlas
+* Mongoose
+* REST API Architecture
+
+---
+
+##  Project Structure
+
+```
+QuickHire/
+│
+├── frontend/        → React + Vite Client
+└── backend/         → Express API Server
+```
+
+---
+
+##  Environment Variables
+
+Backend uses environment variables stored inside a `.env` file.
+
+Create a `.env` file inside the **backend** folder:
+
+```
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+Example:
+
+```
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/database_name
+```
+
+Never share your real database credentials publicly.
+
+---
+
+##  How to Run Locally
+
+### 1️⃣ Clone the Repository
+
+```
+git clone <your-repository-link>
+cd QuickHire
+```
+
+---
+
+### 2️⃣ Setup Backend
+
+```
+cd backend
+npm install
+```
+
+Create `.env` file (see above).
+
+Run backend server:
+
+```
+npm run dev
+```
+
+Backend will run on:
+
+```
+http://localhost:5000
+```
+
+---
+
+### 3️⃣ Setup Frontend
+
+Open another terminal:
+
+```
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔌 API Endpoints
+
+### Jobs
+
+```
+GET    /api/jobs
+GET    /api/jobs/:id
+POST   /api/jobs
+DELETE /api/jobs/:id
+```
+
+---
+
+##  Testing API
+
+You can test backend APIs using:
+
+* Postman
+* Thunder Client
+* Browser (GET requests)
+
+Example:
+
+```
+http://localhost:5000/api/jobs
+```
+
+---
+
+##  Project Goal
+
+The goal of this project is to demonstrate:
+
+* REST API development
+* Full-stack integration
+* Database design
+* Clean UI implementation from Figma
+* Real-world MERN workflow
+
+---
+
+##  Author
+
+Developed by **Md Tayyab**
+
+---
+
+##  Future Improvements
+
+* Authentication system (JWT)
+* Admin role protection
+* Job application system
+* Search & filtering
+* Deployment (Render / Vercel)
+
+---
+
+If you like this project, feel free to give it a star!
